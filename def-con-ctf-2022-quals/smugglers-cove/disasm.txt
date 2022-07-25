@@ -1,0 +1,112 @@
+   0x403808fd4e:        mov    DWORD PTR [r14-0xec8],0x1
+   0x403808fd59:        lea    r15,[r14+0x2c80]
+   0x403808fd60:        movsd  xmm7,QWORD PTR [r14+0x46d0]
+   0x403808fd69:        movsd  xmm6,QWORD PTR [r14+0x46c0]
+   0x403808fd72:        movsd  xmm5,QWORD PTR [r14+0x46a0]
+   0x403808fd7b:        movsd  xmm4,QWORD PTR [r14+0x4830]
+   0x403808fd84:        rorx   rbx,QWORD PTR [rdx],0x2f
+   0x403808fd8a:        cmp    bx,0xfff4
+   0x403808fd8e:        jne    0x403808004c
+   0x403808fd94:        shr    rbx,0x11
+   0x403808fd98:        cmp    DWORD PTR [rbx+0x34],0xf
+   0x403808fd9c:        jne    0x403808004c
+   0x403808fda2:        mov    rbp,QWORD PTR [rbx+0x28]
+   0x403808fda6:        movabs rdi,0x437124eb51575255
+   0x403808fdb0:        cmp    rdi,QWORD PTR [rbp+0xe0]
+   0x403808fdb7:        jne    0x403808004c
+   0x403808fdbd:        cmp    QWORD PTR [rbx+0x20],0x0
+   0x403808fdc2:        jne    0x403808004c
+   0x403808fdc8:        movsd  QWORD PTR [rbp+0xd8],xmm4
+   0x403808fdd0:        movabs rdi,0x437219eb90ef8948
+   0x403808fdda:        cmp    rdi,QWORD PTR [rbp+0x38]
+   0x403808fdde:        jne    0x4038080050
+   0x403808fde4:        movsd  QWORD PTR [rbp+0x30],xmm4
+   0x403808fde9:        movabs rdi,0x437313eb106d8b48
+   0x403808fdf3:        cmp    rdi,QWORD PTR [rbp+0x170]
+   0x403808fdfa:        jne    0x4038080054
+   0x403808fe00:        movsd  QWORD PTR [rbp+0x168],xmm4
+   0x403808fe08:        movabs rdi,0x437413eb006d8b48
+   0x403808fe12:        cmp    rdi,QWORD PTR [rbp+0x50]
+   0x403808fe16:        jne    0x4038080058
+   0x403808fe1c:        movsd  QWORD PTR [rbp+0x48],xmm4
+   0x403808fe21:        movabs rdi,0x437513ebd231c931
+   0x403808fe2b:        cmp    rdi,QWORD PTR [rbp+0x8]
+   0x403808fe2f:        jne    0x403808005c
+   0x403808fe35:        movsd  QWORD PTR [rbp+0x0],xmm4
+   0x403808fe3a:        movabs rdi,0x437619eb909063b1
+   0x403808fe44:        cmp    rdi,QWORD PTR [rbp+0x140]
+   0x403808fe4b:        jne    0x4038080060
+   0x403808fe51:        movsd  QWORD PTR [rbp+0x138],xmm4
+   0x403808fe59:        movabs rdi,0x437719eb909010b2
+   0x403808fe63:        cmp    rdi,QWORD PTR [rbp+0xb0]
+   0x403808fe6a:        jne    0x4038080064
+   0x403808fe70:        movsd  QWORD PTR [rbp+0xa8],xmm4
+   0x403808fe78:        movabs rdi,0x437819eb9008e1c1
+   0x403808fe82:        cmp    rdi,QWORD PTR [rbp+0xf8]
+   0x403808fe89:        jne    0x4038080068
+   0x403808fe8f:        movsd  QWORD PTR [rbp+0xf0],xmm4
+   0x403808fe97:        movabs rdi,0x437919eb9090d101
+   0x403808fea1:        cmp    rdi,QWORD PTR [rbp+0x128]
+   0x403808fea8:        jne    0x403808006c
+   0x403808feae:        movsd  QWORD PTR [rbp+0x120],xmm4
+   0x403808feb6:        movabs rdi,0x437119eb90cd0148
+   0x403808fec0:        cmp    rdi,QWORD PTR [rbp+0x110]
+   0x403808fec7:        jne    0x4038080070
+   0x403808fecd:        movsd  QWORD PTR [rbp+0x108],xmm4
+   0x403808fed5:        movabs rdi,0x437113eb9090d5ff
+   0x403808fedf:        cmp    rdi,QWORD PTR [rbp+0x20]
+   0x403808fee3:        jne    0x4038080074
+   0x403808fee9:        movsd  QWORD PTR [rbp+0x18],xmm4
+   0x403808feee:        movabs rdi,0x437119eb5d5a5f59
+   0x403808fef8:        cmp    rdi,QWORD PTR [rbp+0x158]
+   0x403808feff:        jne    0x4038080078
+   0x403808ff05:        movsd  QWORD PTR [rbp+0x150],xmm4
+   0x403808ff0d:        movabs rdi,0x4371ccfffffe3ae9
+   0x403808ff17:        cmp    rdi,QWORD PTR [rbp+0xc8]
+   0x403808ff1e:        jne    0x403808007c
+   0x403808ff24:        movsd  QWORD PTR [rbp+0xc0],xmm4
+   0x403808ff2c:        rorx   rbp,QWORD PTR [rdx-0x10],0x2f
+   0x403808ff33:        shr    rbp,0x11
+   0x403808ff37:        mov    rbp,QWORD PTR [rbp+0x10]
+   0x403808ff3b:        cmp    DWORD PTR [rbp+0x34],0x3f
+   0x403808ff3f:        jne    0x4038080080
+   0x403808ff45:        mov    rbp,QWORD PTR [rbp+0x28]
+   0x403808ff49:        movabs rdi,0xfffd804001c11018
+   0x403808ff53:        cmp    rdi,QWORD PTR [rbp+0x2a8]
+   0x403808ff5a:        jne    0x4038080080
+   0x403808ff60:        rorx   rbx,QWORD PTR [rbp+0x2a0],0x2f
+   0x403808ff6a:        cmp    bx,0xfff7
+   0x403808ff6e:        jne    0x4038080080
+   0x403808ff74:        shr    rbx,0x11
+   0x403808ff78:        rorx   rbp,QWORD PTR [rdx+0x8],0x2f
+   0x403808ff7f:        cmp    bp,0xfffb
+   0x403808ff83:        jne    0x4038080080
+   0x403808ff89:        shr    rbp,0x11
+   0x403808ff8d:        cmp    rbx,r15
+   0x403808ff90:        jne    0x4038080080
+   0x403808ff96:        mov    rax,QWORD PTR [r14-0xe10]
+   0x403808ff9d:        mov    rax,QWORD PTR [rax+0x30]
+   0x403808ffa1:        sub    rax,rdx
+   0x403808ffa4:        cmp    rax,0x48
+   0x403808ffa8:        jb     0x4038080084
+   0x403808ffae:        mov    QWORD PTR [rdx+0x38],rbp
+   0x403808ffb2:        or     DWORD PTR [rdx+0x3c],0xfffd8000
+   0x403808ffb9:        movsd  QWORD PTR [rdx+0x30],xmm5
+   0x403808ffbe:        mov    DWORD PTR [rdx+0x28],0x1c10fe0
+   0x403808ffc5:        mov    DWORD PTR [rdx+0x2c],0xfffb8040
+   0x403808ffcc:        movsd  QWORD PTR [rdx+0x20],xmm6
+   0x403808ffd1:        movsd  QWORD PTR [rdx+0x18],xmm7
+   0x403808ffd6:        mov    DWORD PTR [rdx+0x10],0x1c12980
+   0x403808ffdd:        mov    DWORD PTR [rdx+0x14],0xfffb0040
+   0x403808ffe4:        add    rdx,0x38
+   0x403808ffe8:        mov    eax,0x2
+   0x403808ffed:        lea    rbx,[r14-0xe14]
+   0x403808fff4:        jmp    0x4001852a2f
+   0x403808fff9:        nop
+   0x403808fffa:        nop
+   0x403808fffb:        nop
+   0x403808fffc:        nop
+   0x403808fffd:        nop
+   0x403808fffe:        nop
+   0x403808ffff:        nop
+   0x4038090000:        Cannot access memory at address 0x4038090000
