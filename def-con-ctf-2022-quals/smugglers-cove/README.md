@@ -4,3 +4,4 @@
 
 ## Articles
 - [Japanese Article](./article-ja.md) by @hiro4bbh
+  - <https://insight-jp.nttsecurity.com/post/102hti5/def-con-ctf-2022-quals-smugglers-covewriteup>
