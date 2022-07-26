@@ -521,7 +521,7 @@ source = [
 もしここをスマートかつ合理的に解けるよ！って方がいたら、是非教えてください!!
 
 ## PWNED!!
-```
+<!-- ```
 # python3 ./gen-exploit.py > ./exploit.lua 
 # QEMU_GDB=1234 LD_PRELOAD=./libluajit-5.1.so.2 ./cove ./exploit.lua 
 
@@ -562,7 +562,8 @@ INSPECTION: This ship's JIT cargo was found to be 0x3fd39bfd54
 ERROR: ld.so: object './libluajit-5.1.so.2' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
 Shiver me timbers! Thar be your flag: FLAG PLACEHOLDER
 # 
-```
+``` -->
+![pwned](./img/pwned.png)
 4回繰り返すと収束して、攻略に成功しました。やったね!!
 具体的なやり方は、Team EnuのGitHubにある`./gen-exploit.py`のコメントを参考にしてください。
 (すみません、当日のWebインターフェイスで攻略に成功したタイミングのスクショを撮るのを忘れました...)
